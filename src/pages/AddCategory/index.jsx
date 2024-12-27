@@ -2,10 +2,8 @@ import { useEffect, useState } from "react";
 
 function AddCategory() {
   const [category, setCategory] = useState({ tenDanhMuc: "" });
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       const response = await fetch(
         `http://localhost:8080/api/danhmuc/createdanhmuc`,
@@ -34,7 +32,7 @@ function AddCategory() {
       <div className="m-8">
         <div className="px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8">
           <div>
-            <h1 className="text-2xl font-medium">
+            <h1 className="text-2xl">
               Thêm danh mục
             </h1>
           </div>
@@ -47,7 +45,7 @@ function AddCategory() {
                   <div className="relative space-y-4">
                     <div>
                       <label
-                        className="block font-medium text-base"
+                        className="block font-medium"
                         htmlFor="name"
                       >
                         Tên danh mục

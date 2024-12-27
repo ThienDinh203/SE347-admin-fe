@@ -22,7 +22,6 @@ function DetailCategory() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       const response = await fetch(
         `http://localhost:8080/api/danhmuc/update/${categoryId}`,
@@ -46,11 +45,12 @@ function DetailCategory() {
     }
   }
 
-
   return (
     category && (
       <div className="m-8">
-        <h1 className="text-2xl font-medium mb-4">{categoryName}</h1>
+        <h1 className="text-2xl font-medium mb-4">
+          {categoryName}
+        </h1>
         <div className="grid gap-4">
           <div>
             <label className="block font-medium mb-2" htmlFor="name">
@@ -68,7 +68,9 @@ function DetailCategory() {
             />
           </div>
           <button
-            onClick={handleSubmit}
+            onClick={
+              handleSubmit
+            }
             className="bg-blue-700 text-white rounded px-4 py-2 hover:bg-blue-800"
           >
             Lưu thay đổi
@@ -77,7 +79,6 @@ function DetailCategory() {
       </div>
     )
   );
-
 }
 
 export default DetailCategory;
