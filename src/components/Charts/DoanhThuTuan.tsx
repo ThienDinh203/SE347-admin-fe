@@ -62,7 +62,7 @@ const options: ApexOptions = {
   },
 };
 
-const ChartTwo = () => {
+const DoanhThuTuan = () => {
   const [state, setState] = useState({
     series: [],
   });
@@ -184,4 +184,4 @@ const ChartTwo = () => {
   );
 };
 
-export default ChartTwo;
+export default DoanhThuTuan;

@@ -112,7 +112,7 @@ const options: ApexOptions = {
   },
 };
 
-const ChartOne = () => {
+const DoanhThuThang = () => {
   const [state, setState] = useState({ series: [] });
   const user = useContext(UserContext);
   useEffect(() => {
@@ -162,4 +162,4 @@ const ChartOne = () => {
   );
 };
 
-export default ChartOne;
+export default DoanhThuThang;
