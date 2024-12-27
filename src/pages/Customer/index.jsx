@@ -57,6 +57,7 @@ function Customer() {
       </div>
 
       <div className="p-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+
         <div className="shadow-sm ring-1 ring-slate-200 rounded-md sm:rounded-lg">
 
           <div className="px-4 -mx-4 -my-5">
@@ -99,15 +100,19 @@ function Customer() {
                       className="px-3 py-4 text-center">
                       {admin.id}
                     </td>
+
                     <td className="px-3 py-4">
                       {admin.username}
                     </td>
+
                     <td className="px-3 py-4 text-center">
                       {admin.email}
                     </td>
+
                     <td className="px-3 py-4 text-center">
                       {admin.gioiTinh}
                     </td>
+
                   </tr>
                 ))}
               </tbody>
@@ -124,14 +129,15 @@ function Customer() {
             placeholder="Tìm kiếm"
             value={adminSearchQuery}
             onChange={handleAdminSearchChange}
+
           />
         </div>
       </div>
 
       <div className="p-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="shadow-sm ring-1 rounded-md">
-
           <div className="px-4 -mx-4 -my-5">
+
             <table className="min-w-full">
               <thead className="border-t">
                 <tr>
@@ -156,9 +162,7 @@ function Customer() {
                   <th
                     scope="col"
                     className="px-3 py-4"
-                  >
-                    Giới tính
-                  </th>
+                  > Giới tính</th>
                 </tr>
               </thead>
               <tbody className="divide-y">
