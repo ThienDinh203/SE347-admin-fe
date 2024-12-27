@@ -13,7 +13,6 @@ function FeedbackManagement() {
           setFeedbacks(data);
         });
     }
-
     async function fetchBooks() {
       fetch("http://localhost:8080/api/sach/getallsach")
         .then((response) => response.json())
@@ -21,7 +20,6 @@ function FeedbackManagement() {
           setBooks(data);
         });
     }
-
     fetchFeedbacks();
     fetchBooks();
   }, []);
@@ -45,7 +43,6 @@ function FeedbackManagement() {
       <div className="px-4">
         <h1 className="text-2xl font-medium">Quản lý phản hồi</h1>
       </div>
-
       <div>
         <div className="py-8">
           <div className="relative">
@@ -117,6 +114,7 @@ function FeedbackManagement() {
                 </th>
               </tr>
             </thead>
+
             <tbody className="divide-y">
               {filteredFeedbacks.map((feedback, index) => (
                 <tr
@@ -127,18 +125,23 @@ function FeedbackManagement() {
                     className="px-3 py-4 text-center">
                     {feedback.id}
                   </td>
+
                   <td className="px-3 py-4">
                     {feedback.tenTaiKhoan}
                   </td>
+
                   <td className="px-3 py-4 text-center">
                     {feedback.sachName}
                   </td>
+
                   <td className="px-3 py-4 text-center">
                     {feedback.noiDung}
                   </td>
+
                   <td className="px-3 py-4 text-center">
                     {feedback.soSao}
                   </td>
+
                   <td className="px-3 py-4 text-center">
                     {new Date(feedback.ngayFeedback).toLocaleDateString()}
                   </td>
