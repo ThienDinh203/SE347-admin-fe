@@ -28,7 +28,10 @@ function Order() {
     <div className="m-8">
       <div className="px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8">
         <div>
-          <h1 className="text-2xl font-medium">Đơn hàng</h1>
+          <h1 className="text-2xl font-medium">
+            Đơn hàng
+
+          </h1>
         </div>
       </div>
 
@@ -50,11 +53,13 @@ function Order() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-                  ></path>
+                  >
+
+                  </path>
                 </svg>
               </div>
               <input
-                className="appearance-none w-full border border-slate-300 p-2 pl-10 rounded-md disabled:bg-slate-100 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="appearance-none w-full border border-slate-300 p-2 pl-10 rounded-md disabled:opacity-50 disabled:cursor-not-allowed"
                 placeholder="Tìm kiếm đơn hàng"
                 value={searchQuery}
                 onChange={handleSearchChange}
@@ -128,19 +133,24 @@ function Order() {
                     <td className="px-3 py-4 text-center">
                       {order.soDienThoai}
                     </td>
+
                     <td className="px-3 py-4 text-center">
                       {order.diaChi}
                     </td>
+
                     <td className="px-3 py-4 text-center">
                       {order.tongTien}
                     </td>
+
                     <td className="px-3 py-4 text-center">
+
                       <input
                         type="checkbox"
                         checked={order.daThanhToan}
                         readOnly
                       />
                     </td>
+
                   </tr>
                 ))}
               </tbody>
