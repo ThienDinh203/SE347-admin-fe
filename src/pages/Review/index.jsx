@@ -8,17 +8,23 @@ function FeedbackManagement() {
   useEffect(() => {
     async function fetchFeedbacks() {
       fetch("http://localhost:8080/api/feedback/laytatcafeedback")
-        .then((response) => response.json())
-        .then((data) => {
-          setFeedbacks(data);
-        });
+        .then(
+          (response) => response.json()
+        )
+        .then(
+          (data) => {
+            setFeedbacks(data);
+          }
+        );
     }
     async function fetchBooks() {
       fetch("http://localhost:8080/api/sach/getallsach")
         .then((response) => response.json())
-        .then((data) => {
-          setBooks(data);
-        });
+        .then(
+          (data) => {
+            setBooks(data);
+          }
+        );
     }
     fetchFeedbacks();
     fetchBooks();

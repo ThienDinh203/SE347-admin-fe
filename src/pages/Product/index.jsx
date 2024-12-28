@@ -1,6 +1,9 @@
-import { useState, useEffect, useContext } from "react";
+import { useState } from "react";
+import { useContext } from "react";
+import { useEffect } from "react";
 import Axios from "axios";
 import { UserContext } from "../../context/UserContext";
+
 function Product() {
   const [products, setProducts] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');

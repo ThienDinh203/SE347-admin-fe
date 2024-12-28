@@ -1,4 +1,7 @@
-import React, { useState, useEffect, useContext } from "react";
+import React from "react";
+import { useState } from "react";
+import { useContext } from "react";
+import { useEffect } from "react";
 import CardDataStats from "../../components/CardDataStats";
 import DoanhThuThang from "../../components/Charts/DoanhThuThang";
 import DoanhThuTuan from "../../components/Charts/DoanhThuTuan";
@@ -138,7 +141,6 @@ function Dashboard() {
         </CardDataStats>
       </div>
       <div className="mt-4 grid grid-cols-12 gap-4 md:mt-6 md:gap-6">
-
         <DoanhThuThang />
 
         <DoanhThuTuan />
